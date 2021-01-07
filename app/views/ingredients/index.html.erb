@@ -4,9 +4,11 @@
 <ul>
   <% @ingredients.each do |ingredient| %>
     <li>
-      <%= ingredient.name %>
+      <%= link_to ingredient.name, ingredient %>
       <br>
-      Description: <%= ingredient.description %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Home", user_path(@user) %>
+

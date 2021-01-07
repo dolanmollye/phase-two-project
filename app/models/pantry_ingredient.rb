@@ -1,4 +1,4 @@
 class PantryIngredient < ApplicationRecord
-    belongs_to :ingredients
+    belongs_to :ingredient
     belongs_to :pantry
 end

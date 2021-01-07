@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_01_06_000721) do
 
   create_table "pantries", force: :cascade do |t|
     t.string "name"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -39,8 +40,7 @@ ActiveRecord::Schema.define(version: 2021_01_06_000721) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

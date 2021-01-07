@@ -1,12 +1,3 @@
-<h2>All Ingredients</h2>
-
-
-<ul>
-  <% @ingredients.each do |ingredient| %>
-    <li>
-      <%= ingredient.name %>
-      <br>
-      Description: <%= ingredient.description %>
-    </li>
-  <% end %>
-</ul>
+<h1><%= @ingredient.name %></h1>
+Quantity:
+<h4><%= @ingredient.quantity %></h4>
