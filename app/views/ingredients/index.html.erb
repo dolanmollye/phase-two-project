@@ -1,7 +1,24 @@
-<h2>All Ingredients</h2>
+<h2>Everything You Have</h2>
+
+<% if flash[:error_message] %>
+<% flash[:error_message].each do |error| %>
+    <p><%= error %></p>
+<% end %>
+<% end %>
+
+<%= form_for @ingredient do |f| %>
+    <%= f.label :name, "New Ingredient" %>
+    <%= f.text_field :name %>
+
+    <%= f.label :quantity, "How Many" %>
+    <%= f.text_field :quantity %>
+
+    <%= f.submit %>
+<% end %>
 
 
 <ul>
+
   <% @ingredients.each do |ingredient| %>
     <li>
       <%= link_to ingredient.name, ingredient %>
@@ -9,6 +26,8 @@
     </li>
   <% end %>
 </ul>
+
+
 
 <%= link_to "Home", user_path(@user) %>
 

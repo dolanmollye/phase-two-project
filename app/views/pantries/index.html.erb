@@ -1,0 +1,11 @@
+<h1>Your Pantries</h1>
+
+<ul>
+
+  <% @pantries.each do |pantry| %>
+    <li>
+      <%= link_to pantry.name, pantry %>
+      <br>
+    </li>
+  <% end %>
+</ul>
