@@ -1,0 +1,16 @@
+<h1>Shopping List</h1>
+
+<%= form_for @shopping_list do |f| %>
+    <%= f.label :name, "Ingredients to buy:" %>
+    <%= f.text_field :name %>
+
+    <%= f.submit %>
+<% end %>
+
+<ul>
+  <% @shopping_lists.each do |list| %>
+  <li>
+    <%= list.name %>
+  </li>
+  <% end %>
+</ul>

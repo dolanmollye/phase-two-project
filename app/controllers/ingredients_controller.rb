@@ -20,7 +20,7 @@ class IngredientsController < ApplicationController
     end
 
     def edit
-        @artist = Artist.find(params[:id])
+        @ingredients = Ingredient.find(params[:id])
     end 
 
     def update
@@ -32,6 +32,6 @@ class IngredientsController < ApplicationController
     private
 
     def ingredient_params
-        params.require(:ingredient).permit(:name, :quantity)
+        params.require(:ingredient).permit(:name, :quantity, :search)
     end
 end

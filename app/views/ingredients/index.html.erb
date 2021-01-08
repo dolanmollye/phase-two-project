@@ -1,10 +1,17 @@
-<h2>Everything You Have</h2>
+<h1>Everything You Have</h1>
 
 <% if flash[:error_message] %>
 <% flash[:error_message].each do |error| %>
     <p><%= error %></p>
 <% end %>
 <% end %>
+
+<%# <h4>Search for Ingredient</h4>
+<%= form_tag(ingredients_path, method: :get) do%>
+    <%# <%= text_field_tag(:search, params[:search])%>
+    <%# <%= submit_tag ("Search") %>
+<%# <% end %>
+<%# <br /> %> 
 
 <%= form_for @ingredient do |f| %>
     <%= f.label :name, "New Ingredient" %>

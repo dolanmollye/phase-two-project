@@ -10,6 +10,7 @@ PantryIngredient.destroy_all
 Pantry.destroy_all
 User.destroy_all
 Ingredient.destroy_all
+ShoppingList.destroy_all
 
 ingredients = [
     {name: "Salt", quantity: 2 },
@@ -49,3 +50,8 @@ ingredients = [
   pi12 = PantryIngredient.create(pantry_id: Pantry.all.sample.id, ingredient_id: Ingredient.all.sample.id)
   pi13 = PantryIngredient.create(pantry_id: Pantry.all.sample.id, ingredient_id: Ingredient.all.sample.id)
   pi14 = PantryIngredient.create(pantry_id: Pantry.all.sample.id, ingredient_id: Ingredient.all.sample.id)
+
+  sl1 = ShoppingList.create(name: "Pasta")
+  sl2 = ShoppingList.create(name: "Spices")
+  sl3 = ShoppingList.create(name: "Mustard")
+
