@@ -34,7 +34,7 @@ ingredients = [
 
   pantry1 = Pantry.create(name: "Kitchen Pantry", user_id: user1.id)
   pantry2 = Pantry.create(name: "Cupboard", user_id: user1.id)
-  pantry3 = Pantry.create(name: "Refridgerator", user_id: user1.id)
+  pantry3 = Pantry.create(name: "Refrigerator", user_id: user1.id)
 
   pi1 = PantryIngredient.create(pantry_id: Pantry.all.sample.id, ingredient_id: Ingredient.all.sample.id)
   pi2 = PantryIngredient.create(pantry_id: Pantry.all.sample.id, ingredient_id: Ingredient.all.sample.id)

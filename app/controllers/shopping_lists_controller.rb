@@ -11,12 +11,8 @@ class ShoppingListsController < ApplicationController
 
     def create
         @shopping_list = ShoppingList.create(shopping_list_params)
-            redirect_to @shopping_list
+            redirect_to shopping_lists_path
     end
-
-    def edit
-        @shopping_list = ShoppingList.find(params[:id])
-    end 
 
     def update
         @shopping_list = ShoppingList.find(params[:id])
