@@ -9,7 +9,9 @@
 
 <ul>
   <% @shopping_lists.each do |list| %>
-  <li><%= list.name %></li>
-  <li><%= button_to 'Remove', shopping_list_path(list), method: 'delete' %></li>
+  <li>
+    <%= list.name %>
+    <%= button_to 'Delete', shopping_list_path(list), method: 'delete' %>
+  </li>
   <% end %>
 </ul>

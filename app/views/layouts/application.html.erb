@@ -9,7 +9,30 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <header class='clearfix'>
+  <div class="left-nav">
+    <ul>
+      <li><%= link_to "Home", user_path %></li>
+    </ul>
+  </div>
+  <div class="center-nav1">
+    <ul>
+      <li><%= link_to "Pantries", pantries_path %></li>
+    </ul>
+  </div>
+   <div class="center-nav2">
+    <ul>
+      <li><%= link_to "Shopping List", shopping_lists_path %></li>
+    </ul>
+  </div>
+  <div class="right-nav">
+    <ul>
+      <li><%= link_to "Ingredients", ingredients_path %></li>
+    </ul>
+  </div>
+</header>
+
+  <div class='content'>
     <%= yield %>
-  </body>
+  </div>
 </html>
