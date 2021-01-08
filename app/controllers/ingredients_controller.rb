@@ -19,6 +19,16 @@ class IngredientsController < ApplicationController
         end
     end
 
+    def edit
+        @artist = Artist.find(params[:id])
+    end 
+
+    def update
+        @ingredient = Ingredient.find(params[:id])
+        @ingredient.update(ingredient_params)
+        redirect_to @ingredient
+    end 
+
     private
 
     def ingredient_params

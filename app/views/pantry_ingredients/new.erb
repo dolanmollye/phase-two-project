@@ -1,0 +1,10 @@
+<h1> Add Items to Your Pantry </h1>
+
+<%= form_for @pantry_ingredient do |f| %>
+
+    <%= f.collection_select :pantry_id, @pantries, :id, :name %>
+    <%= f.collection_select :ingredient_id, @ingredients, :id, :name %>
+    
+    <%= f.submit %>
+
+    <% end %>

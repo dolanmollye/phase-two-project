@@ -9,5 +9,6 @@ class PantriesController < ApplicationController
     
       def show
         @pantry = Pantry.find(params[:id])
+        @ingredients = Ingredient.all
       end
 end
